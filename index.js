@@ -17,5 +17,5 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"DPRK":[function(require,module,exports) {
 "use strict";function e(e){var t=e.config;return React.createElement("div",{className:"App"},React.createElement("h1",null,"User ID ",t.uid),React.createElement("h2",null,"Project ID ",t.projectId),React.createElement("h2",null,"Widget ID ",t.widgetId))}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0,require("./App.css");var t=e;exports.default=t;
 },{"./App.css":"vKFU"}],"Focm":[function(require,module,exports) {
-"use strict";var e=u(require("react")),t=u(require("react-dom"));require("./index.css");var r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var d=document.getElementById("widget");function l(u){t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,{config:u})),d)}console.log(d);
+"use strict";var e=u(require("react")),t=u(require("react-dom"));require("./index.css");var r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}var d=document.getElementById("widget");t.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,{domElement:d})));
 },{"react":"n8MK","react-dom":"NKHc","./index.css":"vKFU","./App":"DPRK"}]},{},["Focm"], null)
