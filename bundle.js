@@ -554,6 +554,23 @@ if (true) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -571,6 +588,11 @@ var __webpack_exports__ = {};
 !function() {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "inititalizeWidget": function() { return /* binding */ inititalizeWidget; }
+});
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(294);
@@ -1102,11 +1124,7 @@ const inititalizeWidget = config => {
   })), widget);
 };
 
-inititalizeWidget({
-  uid: "2",
-  projectId: "l20w9rkoy8cxVUEJROmA",
-  widgetId: "zhFgKu923zjQhOmyLASD"
-});
+
 }();
 /******/ 	return __webpack_exports__;
 /******/ })()
