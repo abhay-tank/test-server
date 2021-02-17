@@ -925,12 +925,13 @@ function Form(props) {
 
   const fetchData = async () => {
     try {
-      if (props.default) {
+      if (!props.default) {
         let data = await fetch(` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`);
         data = await data.json();
         return data;
-      } //   else  (props.default) return JSON.parse(props.widgetStructure);
-      // else return responseData;
+      } else {
+        return JSON.parse(props.widgetStructure);
+      } // else return responseData;
 
     } catch (error) {
       console.log(error);
@@ -1111,8 +1112,7 @@ function Form(props) {
 
 
 
-
-const inititalizeWidget = config => {
+function inititalizeWidget(config) {
   const body = document.getElementsByTagName("BODY")[0];
   const widget = document.createElement("div");
   widget.id = `widget-${config.widgetId}`;
@@ -1122,9 +1122,7 @@ const inititalizeWidget = config => {
     projectId: config.projectId,
     widgetId: config.widgetId
   })), widget);
-};
-
-
+}
 }();
 /******/ 	return __webpack_exports__;
 /******/ })()
