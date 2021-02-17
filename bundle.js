@@ -7,110 +7,14 @@
 		exports["Widget"] = factory();
 	else
 		root["Widget"] = factory();
-})(window, function() {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+})(self, function() {
+return /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
-"use strict";
+/***/ 418:
+/***/ (function(module) {
 
-
-if (true) {
-  module.exports = __webpack_require__(4);
-} else {}
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -204,93 +108,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/***/ 448:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (false) {}
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (true) {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(5);
-} else {}
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(React) {/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
-
-
-function App({
-  config
-}) {
-  return /*#__PURE__*/React.createElement("div", {
-    className: "App"
-  }, /*#__PURE__*/React.createElement("h1", null, "User ID ", config.uid), /*#__PURE__*/React.createElement("h2", null, "Project ID ", config.projectId), /*#__PURE__*/React.createElement("h2", null, "Widget ID ", config.widgetId));
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (App);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v17.0.1
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var l=__webpack_require__(1),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
-if("function"===typeof Symbol&&Symbol.for){var w=Symbol.for;n=w("react.element");p=w("react.portal");exports.Fragment=w("react.fragment");exports.StrictMode=w("react.strict_mode");exports.Profiler=w("react.profiler");q=w("react.provider");r=w("react.context");t=w("react.forward_ref");exports.Suspense=w("react.suspense");u=w("react.memo");v=w("react.lazy")}var x="function"===typeof Symbol&&Symbol.iterator;
-function y(a){if(null===a||"object"!==typeof a)return null;a=x&&a[x]||a["@@iterator"];return"function"===typeof a?a:null}function z(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
-var A={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},B={};function C(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}C.prototype.isReactComponent={};C.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(z(85));this.updater.enqueueSetState(this,a,b,"setState")};C.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
-function D(){}D.prototype=C.prototype;function E(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}var F=E.prototype=new D;F.constructor=E;l(F,C.prototype);F.isPureReactComponent=!0;var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
-function J(a,b,c){var e,d={},k=null,h=null;if(null!=b)for(e in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)H.call(b,e)&&!I.hasOwnProperty(e)&&(d[e]=b[e]);var g=arguments.length-2;if(1===g)d.children=c;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];d.children=f}if(a&&a.defaultProps)for(e in g=a.defaultProps,g)void 0===d[e]&&(d[e]=g[e]);return{$$typeof:n,type:a,key:k,ref:h,props:d,_owner:G.current}}
-function K(a,b){return{$$typeof:n,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function L(a){return"object"===typeof a&&null!==a&&a.$$typeof===n}function escape(a){var b={"=":"=0",":":"=2"};return"$"+a.replace(/[=:]/g,function(a){return b[a]})}var M=/\/+/g;function N(a,b){return"object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
-function O(a,b,c,e,d){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case n:case p:h=!0}}if(h)return h=a,d=d(h),a=""===e?"."+N(h,0):e,Array.isArray(d)?(c="",null!=a&&(c=a.replace(M,"$&/")+"/"),O(d,b,c,"",function(a){return a})):null!=d&&(L(d)&&(d=K(d,c+(!d.key||h&&h.key===d.key?"":(""+d.key).replace(M,"$&/")+"/")+a)),b.push(d)),1;h=0;e=""===e?".":e+":";if(Array.isArray(a))for(var g=
-0;g<a.length;g++){k=a[g];var f=e+N(k,g);h+=O(k,b,c,f,d)}else if(f=y(a),"function"===typeof f)for(a=f.call(a),g=0;!(k=a.next()).done;)k=k.value,f=e+N(k,g++),h+=O(k,b,c,f,d);else if("object"===k)throw b=""+a,Error(z(31,"[object Object]"===b?"object with keys {"+Object.keys(a).join(", ")+"}":b));return h}function P(a,b,c){if(null==a)return a;var e=[],d=0;O(a,e,"","",function(a){return b.call(c,a,d++)});return e}
-function Q(a){if(-1===a._status){var b=a._result;b=b();a._status=0;a._result=b;b.then(function(b){0===a._status&&(b=b.default,a._status=1,a._result=b)},function(b){0===a._status&&(a._status=2,a._result=b)})}if(1===a._status)return a._result;throw a._result;}var R={current:null};function S(){var a=R.current;if(null===a)throw Error(z(321));return a}var T={ReactCurrentDispatcher:R,ReactCurrentBatchConfig:{transition:0},ReactCurrentOwner:G,IsSomeRendererActing:{current:!1},assign:l};
-exports.Children={map:P,forEach:function(a,b,c){P(a,function(){b.apply(this,arguments)},c)},count:function(a){var b=0;P(a,function(){b++});return b},toArray:function(a){return P(a,function(a){return a})||[]},only:function(a){if(!L(a))throw Error(z(143));return a}};exports.Component=C;exports.PureComponent=E;exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=T;
-exports.cloneElement=function(a,b,c){if(null===a||void 0===a)throw Error(z(267,a));var e=l({},a.props),d=a.key,k=a.ref,h=a._owner;if(null!=b){void 0!==b.ref&&(k=b.ref,h=G.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var g=a.type.defaultProps;for(f in b)H.call(b,f)&&!I.hasOwnProperty(f)&&(e[f]=void 0===b[f]&&void 0!==g?g[f]:b[f])}var f=arguments.length-2;if(1===f)e.children=c;else if(1<f){g=Array(f);for(var m=0;m<f;m++)g[m]=arguments[m+2];e.children=g}return{$$typeof:n,type:a.type,
-key:d,ref:k,props:e,_owner:h}};exports.createContext=function(a,b){void 0===b&&(b=null);a={$$typeof:r,_calculateChangedBits:b,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:q,_context:a};return a.Consumer=a};exports.createElement=J;exports.createFactory=function(a){var b=J.bind(null,a);b.type=a;return b};exports.createRef=function(){return{current:null}};exports.forwardRef=function(a){return{$$typeof:t,render:a}};exports.isValidElement=L;
-exports.lazy=function(a){return{$$typeof:v,_payload:{_status:-1,_result:a},_init:Q}};exports.memo=function(a,b){return{$$typeof:u,type:a,compare:void 0===b?null:b}};exports.useCallback=function(a,b){return S().useCallback(a,b)};exports.useContext=function(a,b){return S().useContext(a,b)};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return S().useEffect(a,b)};exports.useImperativeHandle=function(a,b,c){return S().useImperativeHandle(a,b,c)};
-exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return S().useMemo(a,b)};exports.useReducer=function(a,b,c){return S().useReducer(a,b,c)};exports.useRef=function(a){return S().useRef(a)};exports.useState=function(a){return S().useState(a)};exports.version="17.0.1";
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /** @license React v17.0.1
  * react-dom.production.min.js
  *
@@ -302,7 +123,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),m=__webpack_require__(1),r=__webpack_require__(6);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(294),m=__webpack_require__(418),r=__webpack_require__(840);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -591,22 +412,86 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Er
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/***/ 935:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (false) {}
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
 
 if (true) {
-  module.exports = __webpack_require__(7);
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(448);
 } else {}
 
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/***/ 408:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+/** @license React v17.0.1
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var l=__webpack_require__(418),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
+if("function"===typeof Symbol&&Symbol.for){var w=Symbol.for;n=w("react.element");p=w("react.portal");exports.Fragment=w("react.fragment");exports.StrictMode=w("react.strict_mode");exports.Profiler=w("react.profiler");q=w("react.provider");r=w("react.context");t=w("react.forward_ref");exports.Suspense=w("react.suspense");u=w("react.memo");v=w("react.lazy")}var x="function"===typeof Symbol&&Symbol.iterator;
+function y(a){if(null===a||"object"!==typeof a)return null;a=x&&a[x]||a["@@iterator"];return"function"===typeof a?a:null}function z(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+var A={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},B={};function C(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}C.prototype.isReactComponent={};C.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(z(85));this.updater.enqueueSetState(this,a,b,"setState")};C.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
+function D(){}D.prototype=C.prototype;function E(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}var F=E.prototype=new D;F.constructor=E;l(F,C.prototype);F.isPureReactComponent=!0;var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
+function J(a,b,c){var e,d={},k=null,h=null;if(null!=b)for(e in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)H.call(b,e)&&!I.hasOwnProperty(e)&&(d[e]=b[e]);var g=arguments.length-2;if(1===g)d.children=c;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];d.children=f}if(a&&a.defaultProps)for(e in g=a.defaultProps,g)void 0===d[e]&&(d[e]=g[e]);return{$$typeof:n,type:a,key:k,ref:h,props:d,_owner:G.current}}
+function K(a,b){return{$$typeof:n,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function L(a){return"object"===typeof a&&null!==a&&a.$$typeof===n}function escape(a){var b={"=":"=0",":":"=2"};return"$"+a.replace(/[=:]/g,function(a){return b[a]})}var M=/\/+/g;function N(a,b){return"object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
+function O(a,b,c,e,d){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case n:case p:h=!0}}if(h)return h=a,d=d(h),a=""===e?"."+N(h,0):e,Array.isArray(d)?(c="",null!=a&&(c=a.replace(M,"$&/")+"/"),O(d,b,c,"",function(a){return a})):null!=d&&(L(d)&&(d=K(d,c+(!d.key||h&&h.key===d.key?"":(""+d.key).replace(M,"$&/")+"/")+a)),b.push(d)),1;h=0;e=""===e?".":e+":";if(Array.isArray(a))for(var g=
+0;g<a.length;g++){k=a[g];var f=e+N(k,g);h+=O(k,b,c,f,d)}else if(f=y(a),"function"===typeof f)for(a=f.call(a),g=0;!(k=a.next()).done;)k=k.value,f=e+N(k,g++),h+=O(k,b,c,f,d);else if("object"===k)throw b=""+a,Error(z(31,"[object Object]"===b?"object with keys {"+Object.keys(a).join(", ")+"}":b));return h}function P(a,b,c){if(null==a)return a;var e=[],d=0;O(a,e,"","",function(a){return b.call(c,a,d++)});return e}
+function Q(a){if(-1===a._status){var b=a._result;b=b();a._status=0;a._result=b;b.then(function(b){0===a._status&&(b=b.default,a._status=1,a._result=b)},function(b){0===a._status&&(a._status=2,a._result=b)})}if(1===a._status)return a._result;throw a._result;}var R={current:null};function S(){var a=R.current;if(null===a)throw Error(z(321));return a}var T={ReactCurrentDispatcher:R,ReactCurrentBatchConfig:{transition:0},ReactCurrentOwner:G,IsSomeRendererActing:{current:!1},assign:l};
+exports.Children={map:P,forEach:function(a,b,c){P(a,function(){b.apply(this,arguments)},c)},count:function(a){var b=0;P(a,function(){b++});return b},toArray:function(a){return P(a,function(a){return a})||[]},only:function(a){if(!L(a))throw Error(z(143));return a}};exports.Component=C;exports.PureComponent=E;exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=T;
+exports.cloneElement=function(a,b,c){if(null===a||void 0===a)throw Error(z(267,a));var e=l({},a.props),d=a.key,k=a.ref,h=a._owner;if(null!=b){void 0!==b.ref&&(k=b.ref,h=G.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var g=a.type.defaultProps;for(f in b)H.call(b,f)&&!I.hasOwnProperty(f)&&(e[f]=void 0===b[f]&&void 0!==g?g[f]:b[f])}var f=arguments.length-2;if(1===f)e.children=c;else if(1<f){g=Array(f);for(var m=0;m<f;m++)g[m]=arguments[m+2];e.children=g}return{$$typeof:n,type:a.type,
+key:d,ref:k,props:e,_owner:h}};exports.createContext=function(a,b){void 0===b&&(b=null);a={$$typeof:r,_calculateChangedBits:b,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:q,_context:a};return a.Consumer=a};exports.createElement=J;exports.createFactory=function(a){var b=J.bind(null,a);b.type=a;return b};exports.createRef=function(){return{current:null}};exports.forwardRef=function(a){return{$$typeof:t,render:a}};exports.isValidElement=L;
+exports.lazy=function(a){return{$$typeof:v,_payload:{_status:-1,_result:a},_init:Q}};exports.memo=function(a,b){return{$$typeof:u,type:a,compare:void 0===b?null:b}};exports.useCallback=function(a,b){return S().useCallback(a,b)};exports.useContext=function(a,b){return S().useContext(a,b)};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return S().useEffect(a,b)};exports.useImperativeHandle=function(a,b,c){return S().useImperativeHandle(a,b,c)};
+exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.useMemo=function(a,b){return S().useMemo(a,b)};exports.useReducer=function(a,b,c){return S().useReducer(a,b,c)};exports.useRef=function(a){return S().useRef(a)};exports.useState=function(a){return S().useState(a)};exports.version="17.0.1";
+
+
+/***/ }),
+
+/***/ 294:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+
+if (true) {
+  module.exports = __webpack_require__(408);
+} else {}
+
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(__unused_webpack_module, exports) {
+
 /** @license React v0.20.1
  * scheduler.production.min.js
  *
@@ -630,55 +515,712 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 /***/ }),
-/* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-// extracted by mini-css-extract-plugin
+/***/ 840:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 
-/***/ }),
-/* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
+if (true) {
+  module.exports = __webpack_require__(53);
+} else {}
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "initializeWidget", function() { return /* binding */ initializeWidget; });
-
 // EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
+var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(2);
-var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
-
-// CONCATENATED MODULE: ./src/index.css
+var react_dom = __webpack_require__(935);
+;// CONCATENATED MODULE: ./src/components/Form/Form.module.css
 // extracted by mini-css-extract-plugin
-
-// EXTERNAL MODULE: ./src/App.jsx
-var App = __webpack_require__(3);
-
-// CONCATENATED MODULE: ./src/index.js
+/* harmony default export */ var Form_module = ({"main-section":"_1Cpr7QgLcxY3FLOFiaoC3S","widgetContainer":"N4BXKRp0Fa0fmPWQGecJq","formContainer":"_3ij-OALi4P4SE6Cm6FWw9u","widgetIcon":"_1H4tO1oZMPa1X0G_DN-FZs","submit-button":"Ih6U5f7sxpP6MEQOUT7pJ","close-button":"_361p1vMPS99GwIUoWINIc3"});
+;// CONCATENATED MODULE: ./src/components/Screenshot/index.js
+/* provided dependency */ var React = __webpack_require__(294);
 
 
+function Screenshot({
+  setImage,
+  image,
+  hideWidget
+}) {
+  const video = (0,react.useRef)();
+  const screenshotCanvas = (0,react.useRef)(); // const [img, setImg] = useState();
+
+  const capture = async () => {
+    let displayStream = null;
+
+    try {
+      displayStream = await navigator.mediaDevices.getDisplayMedia({
+        video: {
+          // cursor: "never",
+          displaySurface: "monitor",
+          // monitor, window, application, browser
+          logicalSurface: true
+        }
+      });
+      hideWidget(true);
+    } catch (err) {
+      hideWidget(false);
+      console.log("screenshot-->", err);
+    }
+
+    video.current.srcObject = displayStream;
+
+    video.current.onloadedmetadata = event => {
+      video.current.play();
+    }; // return displayStream;
 
 
-function initializeWidget(config) {
-  const widget = document.getElementById("widget");
+    if (displayStream) {
+      displayStream.getVideoTracks()[0].onended = () => {
+        screenshotCanvas.current.width = video.current.videoWidth;
+        screenshotCanvas.current.height = video.current.videoHeight;
+        const context = screenshotCanvas.current.getContext("2d");
+        context.drawImage(video.current, 0, 0, video.current.videoWidth, video.current.videoHeight);
+        hideWidget(false);
+        const mimeType = "image/png";
+        const image = screenshotCanvas.current.toDataURL(mimeType).replace(/^data:image\/(png|jpg);base64,/, "");
 
-  if (widget) {
-    react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_default.a.StrictMode, null, /*#__PURE__*/react_default.a.createElement(App["a" /* default */], {
-      config: config
-    })), widget);
-  } else {
-    console.log("Widget div not found");
+        const blob = (dataToUrl => {
+          let byteString = atob(dataToUrl); // The Uint8Array typed array represents an array
+          // of 8-bit unsigned integers.
+          // The contents are initialized to 0
+
+          const arrayTyped = new Uint8Array(byteString.length);
+
+          for (let i = 0; i < byteString.length; i++) {
+            arrayTyped[i] = byteString.charCodeAt(i);
+          }
+
+          return new Blob([arrayTyped], {
+            type: mimeType
+          });
+        })(image);
+
+        setImage(blob);
+      };
+    } else {
+      hideWidget(false);
+      alert("Error capturing screenshot");
+    }
+  };
+
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "none"
+    }
+  }, /*#__PURE__*/React.createElement("video", {
+    ref: video,
+    autoPlay: true
+  })), /*#__PURE__*/React.createElement("canvas", {
+    style: {
+      display: "none",
+      width: "100%",
+      height: "auto",
+      maxWidth: "1080px"
+    },
+    ref: screenshotCanvas
+  }), image ? /*#__PURE__*/React.createElement("img", {
+    onClick: capture,
+    style: {
+      boxShadow: "0 8px 6px -6px black",
+      cursor: "pointer"
+    },
+    src: screenshotCanvas.current.toDataURL(),
+    alt: "ss"
+  }) : // <img
+  //   onClick={capture}
+  //   className={styles["widgetIcon"]}
+  //   style={{ width: "25px", height: "25px" }}
+  //   src={require("../../assests/feedback/ScreenshotIcon.svg").default}
+  //   alt="screenshot"
+  // />
+  null, /*#__PURE__*/React.createElement("img", {
+    onClick: capture,
+    className: Form_module.widgetIcon,
+    style: {
+      width: "25px",
+      height: "25px"
+    },
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fscreenshot.svg?alt=media&token=bde3fa98-2413-4d39-8d2e-c6967f6bc4a4",
+    alt: "screenshot"
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/video/index.js
+/* provided dependency */ var video_React = __webpack_require__(294);
+
+
+function ScreenVideoRecorder({
+  videoBlob,
+  setVideoBlob,
+  hideWidget
+}) {
+  const videoRecord = (0,react.useRef)();
+  let chunks = [];
+
+  const capture = async () => {
+    let displayStream = null;
+
+    try {
+      displayStream = await navigator.mediaDevices.getDisplayMedia({
+        video: {
+          cursor: "motion",
+          displaySurface: "monitor" // monitor, window, application, browser
+          // logicalSurface: true,
+
+        }
+      });
+      hideWidget(true);
+    } catch (err) {
+      hideWidget(false);
+      console.log("videoRecording-->", err);
+    }
+
+    let mediaRecorder;
+
+    if (displayStream) {
+      mediaRecorder = new MediaRecorder(displayStream); // video.current.srcObject = displayStream;
+
+      displayStream.getVideoTracks()[0].onended = () => {
+        mediaRecorder.stop();
+      }; // video.current.onloadedmetadata = (event) => {
+      //   video.current.play();
+      // };
+
+
+      mediaRecorder.start();
+
+      mediaRecorder.ondataavailable = event => {
+        chunks.push(event.data);
+      };
+
+      mediaRecorder.onstop = event => {
+        let blobvideo = new Blob(chunks, {
+          type: "video/mp4"
+        });
+        hideWidget(false);
+        setVideoBlob(blobvideo);
+        chunks = [];
+        let videoUrl = window.URL.createObjectURL(blobvideo);
+        videoRecord.current.src = videoUrl;
+      };
+    } else {
+      alert("Error recording media");
+      hideWidget(false);
+    }
+  };
+
+  return /*#__PURE__*/video_React.createElement(video_React.Fragment, null, videoBlob ? /*#__PURE__*/video_React.createElement("div", {
+    onClick: capture
+  }, /*#__PURE__*/video_React.createElement("video", {
+    style: {
+      boxShadow: "0 8px 6px -6px black",
+      cursor: "pointer"
+    },
+    ref: videoRecord,
+    autoPlay: true,
+    controls: true
+  })) : // <img
+  //   onClick={capture}
+  //   className={styles["widgetIcon"]}
+  //   src={require("../../assests/feedback/record.svg").default}
+  //   alt="record-screen"
+  // />
+  null, /*#__PURE__*/video_React.createElement("img", {
+    onClick: capture,
+    className: Form_module.widgetIcon,
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Frecord.svg?alt=media&token=4ae4b14a-b051-42c5-9064-daa85f5ddc29",
+    alt: "record-screen"
+  }));
+}
+;// CONCATENATED MODULE: ./src/configuration/config.js
+const config = {
+  Url: "https://0ddda79dc083.ngrok.io"
+};
+;// CONCATENATED MODULE: ./src/components/Form/response.js
+const responseData = {
+  fields: [{
+    fieldType: "textarea",
+    contextEntries: {
+      placeholder: "",
+      label: ""
+    },
+    isDefault: true,
+    fieldName: "feedback",
+    fieldId: "z8FuYwsmR"
+  }, {
+    fieldType: "email",
+    isDefault: false,
+    fieldId: "MplcctPoS5",
+    fieldName: "email",
+    contextEntries: {
+      placeholder: "",
+      label: ""
+    }
+  }, {
+    contextEntries: {
+      label: ""
+    },
+    fieldId: "6ghZnXw581",
+    isDefault: false,
+    fieldType: "rating",
+    fieldName: "Rating"
+  }],
+  defaultLanguage: "en",
+  widgetInfo: {
+    widgetSubtitle: "Spare some time and help us improve",
+    widgetName: "Sumil Widget",
+    widgetTitle: "Are you Happy?"
+  },
+  styles: {
+    backgroundColor: "success",
+    units: "px",
+    fontStyles: {
+      fontColor: "dark",
+      fontFamily: "Gill Sans, sans-serif",
+      fontSize: "20"
+    },
+    colorTheme: {
+      danger: "#d90429",
+      light: "#f8f9fa",
+      warning: "#e76f51",
+      accent: "#2a9d8f",
+      primary: "#e9c46a",
+      dark: "#22223b",
+      success: "#06d6a0",
+      info: "#3a86ff",
+      secondary: "#264653"
+    },
+    width: "300",
+    height: "400",
+    borderRadius: "16",
+    position: {
+      left: null,
+      top: null,
+      bottom: "10",
+      right: "10"
+    }
+  },
+  widgetId: "zhFgKu923zjQhOmyLASD",
+  languages: ["en", "hi"],
+  actions: [{
+    actionId: "1",
+    actionType: "screenshot"
+  }, {
+    actionType: "recordScreen",
+    actionId: "2"
+  }],
+  widgetContext: {
+    en: [{
+      contextEntries: {
+        label: "Suggestions and Feedback",
+        placeholder: "Feedback"
+      },
+      fieldId: "1"
+    }, {
+      fieldId: "2",
+      contextEntries: {
+        placeholder: "Email Address",
+        label: "Enter your Email"
+      }
+    }, {
+      fieldId: "3",
+      contextEntries: {
+        label: "Rate your Experience"
+      }
+    }],
+    hi: [{
+      fieldId: "1",
+      contextEntries: {
+        label: "सुझाव और प्रतिपुष्टि",
+        placeholder: "प्रतिपुष्टि"
+      }
+    }, {
+      contextEntries: {
+        placeholder: "ईमेल पता",
+        label: "अपना ईमेल दर्ज करें"
+      },
+      fieldId: "2"
+    }, {
+      fieldId: "3",
+      contextEntries: {
+        label: "अपने अनुभव को रेट करें"
+      }
+    }]
   }
+};
+;// CONCATENATED MODULE: ./src/components/Form/index.js
+/* provided dependency */ var Form_React = __webpack_require__(294);
+
+
+
+
+
+ // Taking ScreenShot
+//  ------------Generating field-----------------
+
+const generatingField = (field, context, lang, index, arrayField, setArrayField) => {
+  // arrayField, setArrayField;
+  const {
+    fieldType,
+    fieldId,
+    fieldName
+  } = field;
+
+  if (!arrayField[fieldName]) {
+    arrayField[fieldName] = "";
+  }
+
+  const inputFieldChange = event => {
+    setArrayField({ ...arrayField,
+      [event.target.name]: event.target.value
+    });
+  };
+
+  switch (fieldType) {
+    case "textarea":
+      return /*#__PURE__*/Form_React.createElement("div", {
+        className: "text-area",
+        key: fieldId
+      }, /*#__PURE__*/Form_React.createElement("textarea", {
+        style: {
+          border: "none",
+          padding: "0.2rem 0.2rem"
+        },
+        type: "textarea",
+        placeholder: context[lang][index]["contextEntries"].placeholder,
+        name: fieldName,
+        value: arrayField[fieldName],
+        onChange: inputFieldChange,
+        required: true
+      }));
+
+    case "rating":
+      return;
+
+    default:
+      return /*#__PURE__*/Form_React.createElement("input", {
+        style: {
+          width: "100%",
+          margin: "10px 0",
+          padding: "0.2rem 0.1rem",
+          border: "1px solid #ccc"
+        },
+        key: fieldId,
+        type: fieldType,
+        placeholder: context[lang][index]["contextEntries"].placeholder,
+        name: fieldName,
+        value: arrayField[fieldName],
+        onChange: inputFieldChange
+      });
+  }
+};
+
+function Form(props) {
+  const [showWidget, setShowWidget] = (0,react.useState)(false);
+  const [widgetInfo, setWidgetInfo] = (0,react.useState)({});
+  const [widgetField, setWidgetField] = (0,react.useState)([]);
+  const [widgetStyle, setWidgetStyle] = (0,react.useState)({});
+  const [languageOption, setLanguageOption] = (0,react.useState)([]);
+  const [context, setContext] = (0,react.useState)({});
+  const [actions, setActions] = (0,react.useState)([]); // Action data
+
+  const [screenshotImg, setScreenshotImg] = (0,react.useState)(null);
+  const [videoBlob, setVideoBlob] = (0,react.useState)(null); // flags
+
+  const [selectedLanguage, setSelectedLanguage] = (0,react.useState)("en"); //  Form Data
+
+  const [arrayField, setArrayField] = (0,react.useState)({});
+  const widgetRef = (0,react.useRef)();
+
+  const setScreenshotImgToState = data => {
+    setScreenshotImg(data);
+  };
+
+  const setVideoBlobRef = data => {
+    setVideoBlob(data);
+  }; // ----------------Action Generator-------------------------
+
+
+  const genrateAction = action => {
+    switch (action.actionType) {
+      case "screenshot":
+        return /*#__PURE__*/Form_React.createElement("div", {
+          key: action.actionId
+        }, /*#__PURE__*/Form_React.createElement(Screenshot, {
+          setImage: setScreenshotImgToState,
+          image: screenshotImg,
+          hideWidget: hideWidget
+        }));
+
+      case "recordScreen":
+        return /*#__PURE__*/Form_React.createElement("div", {
+          key: action.actionId,
+          style: {}
+        }, /*#__PURE__*/Form_React.createElement(ScreenVideoRecorder, {
+          videoBlob: videoBlob,
+          setVideoBlob: setVideoBlobRef,
+          hideWidget: hideWidget
+        }));
+
+      default:
+        return;
+    }
+  };
+
+  const fetchData = async () => {
+    try {
+      if (props.default) {// let data = await fetch(
+        // 	` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`
+        // );
+        // data = await data.json();
+        // return data;
+      } //   else  (props.default) return JSON.parse(props.widgetStructure);
+      else return responseData;
+    } catch (error) {
+      console.log(error);
+    }
+  }; // Setting up  the data
+
+
+  const setWidget = async () => {
+    let data;
+
+    try {
+      data = await fetchData();
+    } catch (err) {
+      console.log("setWidget-->", err);
+    }
+
+    setSelectedLanguage(data.defaultLanguage);
+    setWidgetStyle(data.styles);
+    setContext(data.widgetContext);
+    setWidgetInfo(data.widgetInfo);
+    setLanguageOption(data.languages);
+    setActions(data.actions);
+    setWidgetField(data.fields);
+  };
+
+  (0,react.useEffect)(() => {
+    if (props.userId && props.projectId && props.widgetId) {
+      if (!Object.keys(widgetInfo).length) {
+        setWidget();
+      }
+    } else {
+      alert("please configure widget");
+      return;
+    }
+
+    showWidget ? widgetRef.current.style.display = "flex" : widgetRef.current.style.display = "none"; // eslint-disable-next-line
+  }, [showWidget]); // submitting the form
+
+  const submitForm = async () => {
+    console.log(arrayField);
+    let fd = new FormData();
+    console.log(screenshotImg);
+    let screenshot = new File([screenshotImg], "Sumil-screenshot.jpg", {
+      type: "image/jpg"
+    });
+    fd.append("screenshot", screenshot);
+    let recordScreen = new File([videoBlob], "Sumil-recordscreen.mp4", {
+      type: "video/mp4"
+    });
+    fd.append("recordScreen", recordScreen);
+    fd.append("feedbackData", JSON.stringify({
+      widgetId: props.widgetId,
+      response: arrayField
+    }));
+    console.log(fd);
+    const url = `${config.Url}/widget-library/postFeedback`;
+    const data = await fetch(url, {
+      method: "POST",
+      body: fd
+    });
+    console.log("Data", data);
+  };
+
+  const changeFormLanguage = event => {
+    event.preventDefault();
+    setSelectedLanguage(event.target.value);
+  };
+
+  const modalToggle = () => {
+    setShowWidget(!showWidget);
+  };
+
+  const hideWidget = hideWidget => {
+    const {
+      widgetId
+    } = props;
+
+    if (hideWidget) {
+      document.getElementById(`widget-${widgetId}`).style.display = "none";
+    } else {
+      document.getElementById(`widget-${widgetId}`).style.display = "flex";
+    }
+  };
+
+  if (!props.userId) {
+    return null;
+  }
+
+  const style = {
+    backgroundColor: widgetStyle && widgetStyle.colorTheme ? `${widgetStyle.colorTheme[widgetStyle.backgroundColor]}` : `#fff`,
+    width: widgetStyle && widgetStyle.width ? `${widgetStyle.width}${widgetStyle.units}` : "0",
+    height: widgetStyle && widgetStyle.height ? `${widgetStyle.height}${widgetStyle.units}` : "0",
+    bottom: widgetStyle && widgetStyle.position.bottom ? `${widgetStyle.position.bottom}${widgetStyle.units}` : "0",
+    right: widgetStyle && widgetStyle.position.right ? `${widgetStyle.position.right}${widgetStyle.units}` : "0",
+    borderRadius: widgetStyle && widgetStyle.borderRadius ? `${widgetStyle.borderRadius}${widgetStyle.units}` : "0",
+    fontSize: widgetStyle && widgetStyle.fontStyles ? `${widgetStyle.fontStyles.fontSize}${widgetStyle.units}` : "1rem",
+    fontFamily: widgetStyle && widgetStyle.fontStyles ? widgetStyle.fontStyles.fontFamily : "inherit",
+    color: widgetStyle && widgetStyle.fontStyles ? `${widgetStyle.colorTheme[widgetStyle.fontStyles.fontColor]}` : "inherit"
+  };
+  return /*#__PURE__*/Form_React.createElement("main", {
+    className: Form_module["main-section"]
+  }, /*#__PURE__*/Form_React.createElement("div", {
+    ref: widgetRef,
+    className: Form_module.widgetContainer,
+    style: {
+      padding: "0.5rem",
+      position: "fixed",
+      boxSizing: "border-box",
+      boxShadow: "5px 5x 5px #aaaaaa",
+      backgroundColor: `${style.backgroundColor}`,
+      width: style.width,
+      height: style.height,
+      bottom: style.bottom,
+      right: style.right,
+      borderRadius: style.borderRadius,
+      fontSize: style.fontSize,
+      fontFamily: style.fontFamily,
+      color: style.color
+    }
+  }, widgetField.length ? /*#__PURE__*/Form_React.createElement("form", {
+    className: Form_module.formContainer,
+    onSubmit: submitForm
+  }, /*#__PURE__*/Form_React.createElement("div", {
+    className: "select-lang"
+  }, !languageOption.length ? null : /*#__PURE__*/Form_React.createElement("select", {
+    value: selectedLanguage,
+    onChange: changeFormLanguage
+  }, languageOption.map(lang => {
+    return /*#__PURE__*/Form_React.createElement("option", {
+      key: lang,
+      value: lang
+    }, lang);
+  }))), widgetField.length ? widgetField.map((field, index) => {
+    return generatingField(field, context, selectedLanguage, index, arrayField, setArrayField);
+  }) : "", /*#__PURE__*/Form_React.createElement("div", {
+    className: Form_module.buttonBox
+  }, actions.length ? actions.map(action => {
+    return genrateAction(action);
+  }) : ""), /*#__PURE__*/Form_React.createElement("div", {
+    className: Form_module["submit-button"]
+  }, /*#__PURE__*/Form_React.createElement("img", {
+    onClick: submitForm,
+    className: Form_module.widgetIcon,
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fsend.svg?alt=media&token=51c7af67-ac67-4eac-bdfe-1af0a276d381",
+    alt: "send"
+  })), /*#__PURE__*/Form_React.createElement("div", {
+    className: Form_module["close-button"]
+  }, /*#__PURE__*/Form_React.createElement("button", {
+    style: {
+      cursor: "pointer",
+      border: "none",
+      width: "3rem",
+      height: "3rem",
+      borderRadius: "100%",
+      backgroundColor: widgetStyle && widgetStyle.fontStyles ? `${widgetStyle.colorTheme["danger"]}` : "inherit"
+    },
+    onClick: modalToggle
+  }, "X"))) : null), !showWidget && /*#__PURE__*/Form_React.createElement("div", {
+    style: {
+      position: "fixed",
+      bottom: "10px",
+      right: "10px"
+    }
+  }, /*#__PURE__*/Form_React.createElement("img", {
+    style: {
+      height: "auto",
+      width: "150px"
+    },
+    onClick: modalToggle,
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/feedback.gif?alt=media&token=0c284981-960c-4e00-a212-25b277e517c4",
+    alt: "Feedback",
+    title: "Feedback"
+  })));
 }
 
-/***/ })
-/******/ ]);
+/* harmony default export */ var components_Form = (Form);
+;// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+const inititalizeWidget = config => {
+  const body = document.getElementsByTagName("BODY")[0];
+  const widget = document.createElement("div");
+  widget.id = `widget-${config.widgetId}`;
+  body.appendChild(widget);
+  react_dom.render( /*#__PURE__*/react.createElement(react.StrictMode, null, /*#__PURE__*/react.createElement(components_Form, {
+    userId: config.uid,
+    projectId: config.projectId,
+    widgetId: config.widgetId
+  })), widget);
+};
+
+inititalizeWidget({
+  uid: "2",
+  projectId: "l20w9rkoy8cxVUEJROmA",
+  widgetId: "zhFgKu923zjQhOmyLASD"
+});
+}();
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
 });
