@@ -799,7 +799,7 @@ function ScreenVideoRecorder({
 }
 ;// CONCATENATED MODULE: ./src/configuration/config.js
 const config = {
-  Url: "https://0ddda79dc083.ngrok.io"
+  Url: "http://localhost:3000"
 };
 ;// CONCATENATED MODULE: ./src/components/Form/index.js
 /* provided dependency */ var Form_React = __webpack_require__(294);
