@@ -801,124 +801,12 @@ function ScreenVideoRecorder({
 const config = {
   Url: "https://0ddda79dc083.ngrok.io"
 };
-;// CONCATENATED MODULE: ./src/components/Form/response.js
-const responseData = {
-  fields: [{
-    fieldType: "textarea",
-    contextEntries: {
-      placeholder: "",
-      label: ""
-    },
-    isDefault: true,
-    fieldName: "feedback",
-    fieldId: "z8FuYwsmR"
-  }, {
-    fieldType: "email",
-    isDefault: false,
-    fieldId: "MplcctPoS5",
-    fieldName: "email",
-    contextEntries: {
-      placeholder: "",
-      label: ""
-    }
-  }, {
-    contextEntries: {
-      label: ""
-    },
-    fieldId: "6ghZnXw581",
-    isDefault: false,
-    fieldType: "rating",
-    fieldName: "Rating"
-  }],
-  defaultLanguage: "en",
-  widgetInfo: {
-    widgetSubtitle: "Spare some time and help us improve",
-    widgetName: "Sumil Widget",
-    widgetTitle: "Are you Happy?"
-  },
-  styles: {
-    backgroundColor: "success",
-    units: "px",
-    fontStyles: {
-      fontColor: "dark",
-      fontFamily: "Gill Sans, sans-serif",
-      fontSize: "20"
-    },
-    colorTheme: {
-      danger: "#d90429",
-      light: "#f8f9fa",
-      warning: "#e76f51",
-      accent: "#2a9d8f",
-      primary: "#e9c46a",
-      dark: "#22223b",
-      success: "#06d6a0",
-      info: "#3a86ff",
-      secondary: "#264653"
-    },
-    width: "300",
-    height: "400",
-    borderRadius: "16",
-    position: {
-      left: null,
-      top: null,
-      bottom: "10",
-      right: "10"
-    }
-  },
-  widgetId: "zhFgKu923zjQhOmyLASD",
-  languages: ["en", "hi"],
-  actions: [{
-    actionId: "1",
-    actionType: "screenshot"
-  }, {
-    actionType: "recordScreen",
-    actionId: "2"
-  }],
-  widgetContext: {
-    en: [{
-      contextEntries: {
-        label: "Suggestions and Feedback",
-        placeholder: "Feedback"
-      },
-      fieldId: "1"
-    }, {
-      fieldId: "2",
-      contextEntries: {
-        placeholder: "Email Address",
-        label: "Enter your Email"
-      }
-    }, {
-      fieldId: "3",
-      contextEntries: {
-        label: "Rate your Experience"
-      }
-    }],
-    hi: [{
-      fieldId: "1",
-      contextEntries: {
-        label: "सुझाव और प्रतिपुष्टि",
-        placeholder: "प्रतिपुष्टि"
-      }
-    }, {
-      contextEntries: {
-        placeholder: "ईमेल पता",
-        label: "अपना ईमेल दर्ज करें"
-      },
-      fieldId: "2"
-    }, {
-      fieldId: "3",
-      contextEntries: {
-        label: "अपने अनुभव को रेट करें"
-      }
-    }]
-  }
-};
 ;// CONCATENATED MODULE: ./src/components/Form/index.js
 /* provided dependency */ var Form_React = __webpack_require__(294);
 
 
 
-
+ // import { responseData } from "./response";
 
  // Taking ScreenShot
 //  ------------Generating field-----------------
@@ -1034,13 +922,13 @@ function Form(props) {
 
   const fetchData = async () => {
     try {
-      if (props.default) {// let data = await fetch(
-        // 	` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`
-        // );
-        // data = await data.json();
-        // return data;
+      if (!props.default) {
+        let data = await fetch(` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`);
+        data = await data.json();
+        return data;
       } //   else  (props.default) return JSON.parse(props.widgetStructure);
-      else return responseData;
+      // else return responseData;
+
     } catch (error) {
       console.log(error);
     }
