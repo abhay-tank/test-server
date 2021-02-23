@@ -598,9 +598,9 @@ __webpack_require__.d(__webpack_exports__, {
 var react = __webpack_require__(294);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(935);
-;// CONCATENATED MODULE: ./src/components/Form/Form.module.css
+;// CONCATENATED MODULE: ./src/components/Widget/Widget.module.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ var Form_module = ({"main-section":"_1Cpr7QgLcxY3FLOFiaoC3S","widgetContainer":"N4BXKRp0Fa0fmPWQGecJq","formContainer":"_3ij-OALi4P4SE6Cm6FWw9u","widgetIcon":"_1H4tO1oZMPa1X0G_DN-FZs","submit-button":"Ih6U5f7sxpP6MEQOUT7pJ","close-button":"_361p1vMPS99GwIUoWINIc3"});
+/* harmony default export */ var Widget_module = ({"widgetContainer":"_1J9jTGtmziTrVLrE9GNkbx","formContainer":"_2moJtD97VNcLnm28wFIoLu","widgetIcon":"WKSmuyZ6poCJjt1qvZ0K-","buttonBox":"_1_wAPLQ7Xon83e2Y6lgSgx","feedbackButton":"_3J-UxYuuLQliE5xwLBQ4Sa","captureIcon":"_2HSVocskkhFSksGYOKqnux"});
 ;// CONCATENATED MODULE: ./src/components/Screenshot/index.js
 /* provided dependency */ var React = __webpack_require__(294);
 
@@ -685,34 +685,16 @@ function Screenshot({
       maxWidth: "1080px"
     },
     ref: screenshotCanvas
-  }), image ? /*#__PURE__*/React.createElement("img", {
+  }), /*#__PURE__*/React.createElement("img", {
     onClick: capture,
-    style: {
-      boxShadow: "0 8px 6px -6px black",
-      cursor: "pointer"
-    },
-    src: screenshotCanvas.current.toDataURL(),
-    alt: "ss"
-  }) : // <img
-  //   onClick={capture}
-  //   className={styles["widgetIcon"]}
-  //   style={{ width: "25px", height: "25px" }}
-  //   src={require("../../assests/feedback/ScreenshotIcon.svg").default}
-  //   alt="screenshot"
-  // />
-  null, /*#__PURE__*/React.createElement("img", {
-    onClick: capture,
-    className: Form_module.widgetIcon,
-    style: {
-      width: "25px",
-      height: "25px"
-    },
-    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fscreenshot.svg?alt=media&token=bde3fa98-2413-4d39-8d2e-c6967f6bc4a4",
-    alt: "screenshot"
+    className: image ? "" : Widget_module.captureIcon,
+    src: image ? screenshotCanvas.current.toDataURL() : "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fscreenshot.svg?alt=media&token=44eff974-e291-4863-8865-761445f7d49e",
+    alt: "Screenshot",
+    title: "Screenshot"
   }));
 }
-;// CONCATENATED MODULE: ./src/components/video/index.js
-/* provided dependency */ var video_React = __webpack_require__(294);
+;// CONCATENATED MODULE: ./src/components/ScreenVideoRecorder/index.js
+/* provided dependency */ var ScreenVideoRecorder_React = __webpack_require__(294);
 
 
 function ScreenVideoRecorder({
@@ -774,9 +756,9 @@ function ScreenVideoRecorder({
     }
   };
 
-  return /*#__PURE__*/video_React.createElement(video_React.Fragment, null, videoBlob ? /*#__PURE__*/video_React.createElement("div", {
+  return /*#__PURE__*/ScreenVideoRecorder_React.createElement(ScreenVideoRecorder_React.Fragment, null, videoBlob ? /*#__PURE__*/ScreenVideoRecorder_React.createElement("div", {
     onClick: capture
-  }, /*#__PURE__*/video_React.createElement("video", {
+  }, /*#__PURE__*/ScreenVideoRecorder_React.createElement("video", {
     style: {
       boxShadow: "0 8px 6px -6px black",
       cursor: "pointer"
@@ -784,29 +766,23 @@ function ScreenVideoRecorder({
     ref: videoRecord,
     autoPlay: true,
     controls: true
-  })) : // <img
-  //   onClick={capture}
-  //   className={styles["widgetIcon"]}
-  //   src={require("../../assests/feedback/record.svg").default}
-  //   alt="record-screen"
-  // />
-  null, /*#__PURE__*/video_React.createElement("img", {
+  })) : /*#__PURE__*/ScreenVideoRecorder_React.createElement("img", {
+    className: Widget_module.captureIcon,
     onClick: capture,
-    className: Form_module.widgetIcon,
-    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Frecord.svg?alt=media&token=4ae4b14a-b051-42c5-9064-daa85f5ddc29",
-    alt: "record-screen"
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2FVideo.svg?alt=media&token=32881fef-d57f-4539-9510-c8a39769e4d3",
+    alt: "record-screen",
+    title: "Record Screen"
   }));
 }
 ;// CONCATENATED MODULE: ./src/configuration/config.js
 const config = {
-  Url: "http://localhost:3000"
+  Url: "https://b313129e98f3.ngrok.io"
 };
-;// CONCATENATED MODULE: ./src/components/Form/index.js
-/* provided dependency */ var Form_React = __webpack_require__(294);
+;// CONCATENATED MODULE: ./src/components/Widget/index.js
+/* provided dependency */ var Widget_React = __webpack_require__(294);
 
 
 
- // import { responseData } from "./response";
 
  // Taking ScreenShot
 //  ------------Generating field-----------------
@@ -831,13 +807,15 @@ const generatingField = (field, context, lang, index, arrayField, setArrayField)
 
   switch (fieldType) {
     case "textarea":
-      return /*#__PURE__*/Form_React.createElement("div", {
+      return /*#__PURE__*/Widget_React.createElement("div", {
         className: "text-area",
         key: fieldId
-      }, /*#__PURE__*/Form_React.createElement("textarea", {
+      }, /*#__PURE__*/Widget_React.createElement("textarea", {
         style: {
-          border: "none",
-          padding: "0.2rem 0.2rem"
+          border: "1px solid #ccc",
+          padding: "0.5rem",
+          margin: "0.5rem 0",
+          boxSizing: "border-box"
         },
         type: "textarea",
         placeholder: context[lang][index]["contextEntries"].placeholder,
@@ -851,12 +829,12 @@ const generatingField = (field, context, lang, index, arrayField, setArrayField)
       return;
 
     default:
-      return /*#__PURE__*/Form_React.createElement("input", {
+      return /*#__PURE__*/Widget_React.createElement("input", {
         style: {
-          width: "100%",
-          margin: "10px 0",
-          padding: "0.2rem 0.1rem",
-          border: "1px solid #ccc"
+          border: "1px solid #ccc",
+          padding: "0.5rem",
+          margin: "0.5rem 0",
+          boxSizing: "border-box"
         },
         key: fieldId,
         type: fieldType,
@@ -868,7 +846,7 @@ const generatingField = (field, context, lang, index, arrayField, setArrayField)
   }
 };
 
-function Form(props) {
+function Widget(props) {
   const [showWidget, setShowWidget] = (0,react.useState)(false);
   const [widgetInfo, setWidgetInfo] = (0,react.useState)({});
   const [widgetField, setWidgetField] = (0,react.useState)([]);
@@ -894,26 +872,23 @@ function Form(props) {
   }; // ----------------Action Generator-------------------------
 
 
-  const genrateAction = action => {
+  const generateAction = action => {
     switch (action.actionType) {
       case "screenshot":
-        return /*#__PURE__*/Form_React.createElement("div", {
-          key: action.actionId
-        }, /*#__PURE__*/Form_React.createElement(Screenshot, {
+        return /*#__PURE__*/Widget_React.createElement(Screenshot, {
+          key: action.actionId,
           setImage: setScreenshotImgToState,
           image: screenshotImg,
           hideWidget: hideWidget
-        }));
+        });
 
       case "recordScreen":
-        return /*#__PURE__*/Form_React.createElement("div", {
+        return /*#__PURE__*/Widget_React.createElement(ScreenVideoRecorder, {
           key: action.actionId,
-          style: {}
-        }, /*#__PURE__*/Form_React.createElement(ScreenVideoRecorder, {
           videoBlob: videoBlob,
           setVideoBlob: setVideoBlobRef,
           hideWidget: hideWidget
-        }));
+        });
 
       default:
         return;
@@ -922,13 +897,9 @@ function Form(props) {
 
   const fetchData = async () => {
     try {
-      if (!props.default) {
-        let data = await fetch(` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`);
-        data = await data.json();
-        return data;
-      } //   else  (props.default) return JSON.parse(props.widgetStructure);
-      // else return responseData;
-
+      let data = await fetch(` ${config.Url}/widget-library/${props.userId}/${props.projectId}/${props.widgetId}`);
+      data = await data.json();
+      return data;
     } catch (error) {
       console.log(error);
     }
@@ -944,6 +915,7 @@ function Form(props) {
       console.log("setWidget-->", err);
     }
 
+    console.log(data);
     setSelectedLanguage(data.defaultLanguage);
     setWidgetStyle(data.styles);
     setContext(data.widgetContext);
@@ -954,8 +926,11 @@ function Form(props) {
   };
 
   (0,react.useEffect)(() => {
+    console.log("excuting");
+
     if (props.userId && props.projectId && props.widgetId) {
       if (!Object.keys(widgetInfo).length) {
+        console.log("excuting");
         setWidget();
       }
     } else {
@@ -967,14 +942,13 @@ function Form(props) {
   }, [showWidget]); // submitting the form
 
   const submitForm = async () => {
-    console.log(arrayField);
     let fd = new FormData();
     console.log(screenshotImg);
-    let screenshot = new File([screenshotImg], "Sumil-screenshot.jpg", {
+    let screenshot = new File([screenshotImg], `${props.widgetId}-feedback-screenshot.jpg`, {
       type: "image/jpg"
     });
     fd.append("screenshot", screenshot);
-    let recordScreen = new File([videoBlob], "Sumil-recordscreen.mp4", {
+    let recordScreen = new File([videoBlob], `${props.widgetId}-recordscreen.mp4`, {
       type: "video/mp4"
     });
     fd.append("recordScreen", recordScreen);
@@ -990,10 +964,19 @@ function Form(props) {
         method: "POST",
         body: fd
       });
-      alert(data);
+      console.log("Response", data);
+      alert("Feedback sumbitted");
+      clearForm();
     } catch (err) {
       console.log("Post Error-->", err);
     }
+  };
+
+  const clearForm = () => {
+    setArrayField({});
+    setScreenshotImg(null);
+    setVideoBlob(null);
+    setSelectedLanguage("en");
   };
 
   const changeFormLanguage = event => {
@@ -1021,11 +1004,9 @@ function Form(props) {
     return null;
   }
 
-  return /*#__PURE__*/Form_React.createElement("main", {
-    className: Form_module["main-section"]
-  }, /*#__PURE__*/Form_React.createElement("div", {
+  return /*#__PURE__*/Widget_React.createElement("main", null, /*#__PURE__*/Widget_React.createElement("div", {
     ref: widgetRef,
-    className: Form_module.widgetContainer,
+    className: Widget_module.widgetContainer,
     style: {
       padding: "0.5rem",
       position: "fixed",
@@ -1034,87 +1015,76 @@ function Form(props) {
       backgroundColor: widgetStyle?.colorTheme ? `${widgetStyle.colorTheme[widgetStyle.backgroundColor]}` : `#fff`,
       width: widgetStyle?.width ? `${widgetStyle.width}${widgetStyle.units}` : "0",
       height: widgetStyle?.height ? `${widgetStyle.height}${widgetStyle.units}` : "0",
-      top: widgetStyle?.position?.top ? `${widgetStyle.position.top}${widgetStyle.units}` : `0${widgetStyle.units}`,
-      left: widgetStyle?.position?.left ? `${widgetStyle.position.left}${widgetStyle.units}` : `0${widgetStyle.units}`,
-      bottom: widgetStyle?.position?.bottom ? `${widgetStyle.position.bottom}${widgetStyle.units}` : `0${widgetStyle.units}`,
-      right: widgetStyle?.position?.right ? `${widgetStyle.position.right}${widgetStyle.units}` : `0${widgetStyle.units}`,
+      bottom: widgetStyle?.position?.bottom ? widgetStyle.position.bottom !== "0" ? `${widgetStyle.position.bottom}${widgetStyle.units}` : "auto" : "auto",
+      top: widgetStyle?.position?.top ? widgetStyle.position.top !== "0" ? `${widgetStyle.position.top}${widgetStyle.units}` : "auto" : "auto",
+      left: widgetStyle?.position?.left ? widgetStyle.position.left !== "0" ? `${widgetStyle.position.left}${widgetStyle.units}` : "auto" : "auto",
+      right: widgetStyle?.position?.right ? widgetStyle.position.right !== "0" ? `${widgetStyle.position.right}${widgetStyle.units}` : "auto" : "auto",
       borderRadius: widgetStyle?.borderRadius ? `${widgetStyle.borderRadius}${widgetStyle.units}` : "0",
       fontSize: widgetStyle?.fontStyles ? `${widgetStyle.fontStyles.fontSize}${widgetStyle.units}` : "1rem",
       fontFamily: widgetStyle?.fontStyles ? widgetStyle.fontStyles.fontFamily : "inherit",
       color: widgetStyle?.fontStyles ? `${widgetStyle.colorTheme[widgetStyle.fontStyles.fontColor]}` : "inherit"
     }
-  }, widgetField.length ? /*#__PURE__*/Form_React.createElement("form", {
-    className: Form_module.formContainer,
+  }, widgetField.length ? /*#__PURE__*/Widget_React.createElement("form", {
+    className: Widget_module.formContainer,
     onSubmit: submitForm
-  }, /*#__PURE__*/Form_React.createElement("div", {
+  }, /*#__PURE__*/Widget_React.createElement("div", {
     className: "select-lang"
-  }, !languageOption.length ? null : /*#__PURE__*/Form_React.createElement("select", {
+  }, !languageOption.length ? null : /*#__PURE__*/Widget_React.createElement("select", {
     value: selectedLanguage,
     onChange: changeFormLanguage
   }, languageOption.map(lang => {
-    return /*#__PURE__*/Form_React.createElement("option", {
+    return /*#__PURE__*/Widget_React.createElement("option", {
       key: lang,
       value: lang
     }, lang);
   }))), widgetField.length ? widgetField.map((field, index) => {
     return generatingField(field, context, selectedLanguage, index, arrayField, setArrayField);
-  }) : "", /*#__PURE__*/Form_React.createElement("div", {
-    className: Form_module.buttonBox
-  }, actions.length ? actions.map(action => {
-    return genrateAction(action);
-  }) : ""), /*#__PURE__*/Form_React.createElement("div", {
-    className: Form_module["submit-button"]
-  }, /*#__PURE__*/Form_React.createElement("img", {
+  }) : "", actions.length ? actions.map(action => {
+    return generateAction(action);
+  }) : "", /*#__PURE__*/Widget_React.createElement("div", {
+    className: Widget_module.buttonBox
+  }, /*#__PURE__*/Widget_React.createElement("img", {
     onClick: submitForm,
-    className: Form_module.widgetIcon,
+    className: Widget_module.widgetIcon,
     src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fsend.svg?alt=media&token=51c7af67-ac67-4eac-bdfe-1af0a276d381",
     alt: "send"
-  })), /*#__PURE__*/Form_React.createElement("div", {
-    className: Form_module["close-button"]
-  }, /*#__PURE__*/Form_React.createElement("button", {
-    style: {
-      cursor: "pointer",
-      border: "none",
-      width: "3rem",
-      height: "3rem",
-      borderRadius: "100%",
-      backgroundColor: widgetStyle?.fontStyles ? `${widgetStyle.colorTheme["danger"]}` : "inherit"
-    },
+  }), /*#__PURE__*/Widget_React.createElement("img", {
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fclose.svg?alt=media&token=baa5cb11-0cf3-4a59-8449-09cd18c330dd",
+    className: Widget_module.widgetIcon,
+    alt: "close",
+    title: "Hide Widget",
     onClick: modalToggle
-  }, "X"))) : null), !showWidget && /*#__PURE__*/Form_React.createElement("div", {
+  }))) : null), !showWidget && /*#__PURE__*/Widget_React.createElement("div", {
     style: {
       position: "fixed",
       bottom: "10px",
       right: "10px"
     }
-  }, /*#__PURE__*/Form_React.createElement("img", {
-    style: {
-      height: "auto",
-      width: "150px"
-    },
+  }, /*#__PURE__*/Widget_React.createElement("img", {
+    className: Widget_module.feedbackButton,
     onClick: modalToggle,
-    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/feedback.gif?alt=media&token=0c284981-960c-4e00-a212-25b277e517c4",
+    src: "https://firebasestorage.googleapis.com/v0/b/feedback-widget-3af40.appspot.com/o/icon%2Fsmiley.svg?alt=media&token=bdab244c-f387-4616-9ee4-4ff54212094c",
     alt: "Feedback",
     title: "Feedback"
   })));
 }
 
-/* harmony default export */ var components_Form = (Form);
+/* harmony default export */ var components_Widget = (Widget);
 ;// CONCATENATED MODULE: ./src/index.js
 
 
 
-function inititalizeWidget(config) {
+const inititalizeWidget = config => {
   const body = document.getElementsByTagName("BODY")[0];
   const widget = document.createElement("div");
   widget.id = `widget-${config.widgetId}`;
   body.appendChild(widget);
-  react_dom.render( /*#__PURE__*/react.createElement(react.StrictMode, null, /*#__PURE__*/react.createElement(components_Form, {
+  react_dom.render( /*#__PURE__*/react.createElement(react.StrictMode, null, /*#__PURE__*/react.createElement(components_Widget, {
     userId: config.uid,
     projectId: config.projectId,
     widgetId: config.widgetId
   })), widget);
-}
+};
 }();
 /******/ 	return __webpack_exports__;
 /******/ })()
