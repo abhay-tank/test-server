@@ -591,7 +591,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "inititalizeWidget": function() { return /* binding */ inititalizeWidget; }
+  "initializeWidget": function() { return /* binding */ initializeWidget; }
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -1074,7 +1074,7 @@ function Widget(props) {
 
 
 
-const inititalizeWidget = config => {
+const initializeWidget = config => {
   const body = document.getElementsByTagName("BODY")[0];
   const widget = document.createElement("div");
   widget.id = `widget-${config.widgetId}`;
